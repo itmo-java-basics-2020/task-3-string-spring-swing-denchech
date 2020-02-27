@@ -12,19 +12,6 @@ import java.util.Map;
 import java.util.TreeMap;
 
 public class Task3 {
-    public static void main(String[] args) {
-        Task3 task3 = new Task3();
-//        System.out.println(task3.isPermutation("AB", "ab"));
-//        System.out.println("AB".charAt(0) + 0);
-//        System.out.println("ab ".charAt(0) + 0);
-//        Map<Character, Integer> a = new TreeMap<Character, Integer>();
-//        Map<Character, Integer> b = new TreeMap<Character, Integer>();
-//        a.put('A', 1);
-//        b.put('a', 1);
-        int[][] m = new int[][]{{}, {}};
-        int[][] x = new int[][]{{}, {}};
-        System.out.println(m.toString());
-    }
 
     /**
      * Напишите функцию, которая принимает массив целых чисел и циклически сдвигает элементы этого массива вправо:
@@ -58,6 +45,9 @@ public class Task3 {
         if (inputArray.length == 1){
             return inputArray[0];
         }
+        if (inputArray.length == 2){
+            return inputArray[0] * inputArray[1];
+        }
         int max = Integer.MIN_VALUE;
 //        for (int i = 0; i < inputArray.length; i++){
 //            for (int j = i + 1; j < inputArray.length; j++){
@@ -75,7 +65,7 @@ public class Task3 {
         int maxNegative2 = Integer.MIN_VALUE;
         for (int i = 0; i < inputArray.length; i++){
             if (inputArray[i] < 0 && inputArray[i] > maxNegative2 && i != indexMaxNegative){
-                maxNegative1 = inputArray[i];
+                maxNegative2 = inputArray[i];
             }
         }
         int maxPositive1 = -1;
